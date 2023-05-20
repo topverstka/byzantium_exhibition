@@ -2,6 +2,7 @@
 
 	h3 {
 		@include title-2();
+        @include title-2-adaptive;
         // font-size: rem(38);
         margin: em(40, 38) 0 em(20, 38);
 	}

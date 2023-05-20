@@ -1,0 +1,40 @@
+.c-exh {
+    display: block;
+    max-width: 400px;
+}
+
+.c-exh__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-exh__media {
+    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 1/1.2;
+}
+
+.c-exh__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.c-exh__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-exh__title {
+    @include title-2;
+}
+
+.text {
+
+}
+
+.c-exh__text {
+
+}

@@ -27,6 +27,7 @@ $accent-second-hov: brig-color($accent-second, active);
 // Задний фон разделов
 $frame-dark: $dark;
 $frame-light: $light;
+$frame-gray: #F8F8F8;
 
 // Обводка
 $border-color-light: #d8d3c5;
@@ -82,13 +83,22 @@ $tr: 0.3s;
 @import './reset';
 
 html {
+    font-size: 22px;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+
+    @media (max-width: 1550px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 16px;
+    }
 }
 
 body {
     font-family: $ff-main;
-    font-size: rem(22);
+    // font-size: rem(22);
     font-weight: 400;
     color: $text-primary;
     line-height: 1.5;
@@ -109,18 +119,6 @@ body {
             // padding-right: attr(data-padding-right);
             width: var(--body-padding-right);
         }
-    }
-
-    @media (max-width: 900px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 600px) {
-        font-size: 18px;
-    }
-
-    @media (max-width: $mobile-l) {
-        font-size: 16px;
     }
 }
 
@@ -156,15 +154,31 @@ body {
 
 // Стили будут применяться ко всем классам содержащим *__container, кроме тех, где также используется класс .container-reset
 [class*='__container']:not(.container-reset) {
-    @if ($max-width-container>0) {
+    @if ($max-width-container > 0) {
         max-width: $max-width-container + px;
         box-sizing: content-box;
         margin: 0 auto;
     }
 
-    @if ($container-padding>0) {
+    @if ($container-padding > 0) {
         padding: 0 var(--container-padding);
     }
+
+    // @media (max-width: $max-width-container + $container-padding + px) {
+    //     max-width: $laptop-l;
+    // }
+
+    // @media (max-width: 1548px) {
+    //     max-width: $laptop;
+    // }
+
+    // @media (max-width: 1548px) {
+    //     max-width: $laptop;
+    // }
+
+    // @media (max-width: 1198px) {
+    //     max-width: 852px;
+    // }
 
     @media (max-width: $mobile-l) {
         --container-padding: 20px;
@@ -195,7 +209,7 @@ body {
 // @import "./components/signa";
 
 // Карточки
-// @import "./components/cards/";
+@import "./cards/c-exh";
 
 // Модальные окна
 // @import "./components/modals/";
@@ -205,6 +219,7 @@ body {
 @import './sections/header';
 @import './sections/main';
 @import './sections/s-about';
+@import './sections/s-exh';
 @import './sections/footer';
 
 // Стили для отдельных страниц

@@ -40,12 +40,12 @@
 }
 //REM
 @function rem($px) {
-	$result: math.round(math.div($px, 16) * 100) / 100 + rem;
+	$result: math.div(math.round(math.div($px, 22) * 100), 100) + rem;
 	@return $result;
 }
 //EM
-@function em($px, $current: 16) {
-	$result: math.round(math.div($px, $current) * 100) / 100 + em;
+@function em($px, $current: 22) {
+	$result: math.div(math.round(math.div($px, $current) * 100), 100) + em;
 	@return $result;
 }
 // line-height в px переводит в %

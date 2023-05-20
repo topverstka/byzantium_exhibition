@@ -96,6 +96,9 @@
         color: $accent;
     }
 
+}
+@mixin title-2-adaptive {
+
     @media (max-width: 900px) {
         font-size: rem(30);
     }
@@ -107,15 +110,16 @@
 
 @mixin text {
     font-size: rem(22);
-    color: create-rgba($text-primary, .6);
+    color: create-rgba($text-primary, .8);
 
     &.is-light {
-        color: create-rgba($light, .6);
+        color: create-rgba($light, .7);
     }
 }
 
 .title-2 {
 	@include title-2;
+    @include title-2-adaptive;
 }
 
 .title-ghost {

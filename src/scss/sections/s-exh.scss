@@ -1,0 +1,23 @@
+.s-exh {
+    background-color: $frame-gray;
+    overflow: hidden;
+}
+
+.s-exh__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (max-width: $tablet) {
+        gap: 20px;
+    }
+}
+
+.s-exh__body {
+    display: flex;
+    gap: 40px;
+
+    & > * {
+        flex-shrink: 0;
+    }
+}
