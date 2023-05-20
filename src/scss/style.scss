@@ -1,0 +1,197 @@
+@use 'sass:math';
+@import './mixins';
+
+// ========== ШРИФТЫ ==========
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+
+@include font('Nautilus Pompilius', normal, 400, '/fonts/NautilusPompilius.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+// ========== КОНЕЦ ШРИФТЫ ==========
+
+// ========== ПЕРЕМЕННЫЕ ==========
+$light: #fff;
+$dark: #3d3d3d;
+
+// Текст
+$text-primary: $dark;
+$text-light: $light;
+$text-second: #7d7d7d;
+$accent: #ffce26;
+$accent-second: #785a36;
+
+// Hovers
+$dark-hov: create-rgba($dark, 0.9);
+$accent-hov: #ffc400;
+$accent-second-hov: brig-color($accent-second, active);
+
+// Задний фон разделов
+$frame-dark: $dark;
+$frame-light: $light;
+
+// Обводка
+$border-color-light: #d8d3c5;
+$border-color-dark: #aca191;
+
+// Радиусы
+$radius-s: 8px;
+$radius-l: 20px;
+$radius-max: 999px;
+$radius-round: 50%;
+
+// Текстовые поля
+$input-placeholder: create-rgba($text-primary, 0.3);
+
+// Уведомления
+$error: #fa9d9d;
+
+// Разрешения экранов
+$min-width: 320px;
+$max-width: 1920px;
+$max-width-container: 1440;
+$container-padding: 48;
+$container-width: $max-width-container + $container-padding;
+
+// Разрешения экранов
+$laptop-l: 1500px;
+$laptop: 1150px;
+$tablet: 800px;
+$mobile-l: 450px;
+$mobile-m: 390px;
+$mobile-s: 330px;
+$hide-menu: 900px;
+
+// Прочее
+$modal-bg: #f5f5f5;
+$ff-main: 'Roboto', sans-serif;
+$ff-title: 'Nautilus Pompilius', sans-serif;
+$tr: 0.3s;
+
+// ========== КОНЕЦ ПЕРЕМЕННЫЕ ==========
+
+// ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
+
+:root {
+    --container-padding: #{math.div($container-padding, 2) + 'px'};
+    --container-width: #{$container-width + 'px'};
+    --hide-menu: #{$tablet};
+}
+
+// ========== КОНЕЦ ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
+
+// Сброс CSS
+@import './reset';
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: $ff-main;
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-primary;
+    line-height: 1.4;
+
+    .is-lock & {
+        position: relative;
+        overflow: hidden;
+        touch-action: none;
+        padding-right: var(--body-padding-right);
+
+        &::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: $dark;
+            // padding-right: attr(data-padding-right);
+            width: var(--body-padding-right);
+        }
+    }
+}
+
+*::selection {
+    background-color: create-rgba($accent, 0.3);
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+
+    // & > .content {
+    //     flex: 1 0 auto;
+    //     position: relative;
+    //     z-index: 1;
+    // }
+}
+
+.content {
+    & > *:not(:last-child) {
+        margin-bottom: 50px;
+
+        @media (max-width: $mobile-l) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+// Стили будут применяться ко всем классам содержащим *__container, кроме тех, где также используется класс .container-reset
+[class*='__container']:not(.container-reset) {
+    @if ($max-width-container>0) {
+        max-width: $max-width-container + px;
+        box-sizing: content-box;
+        margin: 0 auto;
+    }
+
+    @if ($container-padding>0) {
+        padding: 0 var(--container-padding);
+    }
+
+    @media (max-width: $mobile-l) {
+        --container-padding: 20px;
+    }
+
+    @media (max-width: $mobile-m) {
+        --container-padding: 16px;
+    }
+}
+
+// ========== БИБЛИОТЕКИ ==========
+
+// @import "./libs/swiper";
+// @import "./libs/lightgallery";
+// @import "./libs/rangeslider";
+
+// ========== ПОДКЛЮЧЕНИЕ ФАЙЛОВ ==========
+// Базовые стили, шаблоны, заготовки
+@import './base';
+
+// Общие стили проекта
+@import './common';
+
+// Компоненты
+// @import "./components/cursorSmooth";
+// @import "./components/includedVideo";
+// @import "./components/backToTop";
+// @import "./components/signa";
+
+// Карточки
+// @import "./components/cards/";
+
+// Модальные окна
+// @import "./components/modals/";
+
+// Секции
+@import './sections/header';
+@import './sections/main';
+@import './sections/footer';
+
+// Стили для отдельных страниц
+// @import "./pages/";

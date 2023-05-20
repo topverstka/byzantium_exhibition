@@ -1,0 +1,146 @@
+// Бургер
+.burger {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: $tr;
+
+    & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 2px;
+        display: block;
+        background: $text-primary;
+        transition: $tr;
+
+        &:nth-child(1) {
+            transform: translate(-50%, calc(-50% - 8px));
+        }
+
+        &:nth-child(2) {
+            transform: translate(-50%, -50%);
+        }
+
+        &:nth-child(3) {
+            transform: translate(-50%, calc(-50% + 8px));
+        }
+    }
+
+	&.is-light {
+
+		& span {
+			background-color: $light;
+		}
+	}
+
+    &.is-close {
+
+        & span {
+
+            &:nth-child(1) {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                width: 0;
+            }
+
+            &:nth-child(3) {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}
+//========================================================================================================================================================
+
+
+// section margin large
+.sm--l {
+    margin: 160px 0;
+
+    @media (max-width: $tablet) {
+        margin: 120px 0;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin: 80px 0;
+    }
+}
+
+// section padding large
+.sp--l {
+    padding: 160px 0;
+
+    @media (max-width: $tablet) {
+        padding: 120px 0;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 80px 0;
+    }
+}
+//========================================================================================================================================================
+
+
+// Заголовки
+@mixin title-2 {
+    font-family: $ff-title;
+    font-size: 20px;
+	// font-size: 160px;
+	// font-weight: 900;
+	// line-height: 1;
+	// text-transform: uppercase;
+}
+
+.title-2 {
+	@include title-2;
+	// @include resVal(font-size, 100, 160, 1000, 1400);
+
+	// @media (max-width: 1000px) {
+	// 	font-size: 100px;
+	// }
+}
+//========================================================================================================================================================
+
+// Шапка раздела
+// .s-header {
+//     margin-bottom: 24px;
+
+//     @media (max-width: $mobile-l) {
+//         // margin-bottom: 18px;
+//     }
+// }
+
+//========================================================================================================================================================
+
+// Круглая иконка внутри текста
+.has-include-icon {
+	white-space: nowrap;
+
+	& span {
+		position: relative;
+		display: inline-block;
+		color: transparent;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: .8em;
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+			background: center/var(--include-icon-size, 36% 36%) no-repeat $accent var(--include-icon);
+			pointer-events: none;
+		}
+	}
+}
+//========================================================================================================================================================
+
+// Классы для единичных стилей
+.overflow-hidden {
+	overflow: hidden;
+}
