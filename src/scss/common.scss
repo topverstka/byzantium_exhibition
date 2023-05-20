@@ -142,6 +142,38 @@
 //     }
 // }
 
+// Контейнер для шапки и тела разделов
+.s-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @media (max-width: $tablet) {
+        gap: rem(20);
+    }
+}
+
+// Шапка раздела
+.s-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+// Шаблон для раздела с левым маленьким столбиком и правой контентной частью
+.temp {
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+    gap: 24px;
+}
+
+.temp-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
 //========================================================================================================================================================
 
 // Круглая иконка внутри текста

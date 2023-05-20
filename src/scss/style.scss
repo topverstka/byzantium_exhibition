@@ -30,8 +30,8 @@ $frame-light: $light;
 $frame-gray: #F8F8F8;
 
 // Обводка
-$border-color-light: #d8d3c5;
-$border-color-dark: #aca191;
+$border-color-light: #e5e5e5;
+// $border-color-dark: #aca191;
 
 // Радиусы
 $radius-s: 8px;
@@ -67,8 +67,6 @@ $ff-main: 'Hauora', sans-serif;
 $ff-title: 'Lena', sans-serif;
 $tr: 0.3s;
 
-// ========== КОНЕЦ ПЕРЕМЕННЫЕ ==========
-
 // ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
 
 :root {
@@ -76,8 +74,6 @@ $tr: 0.3s;
     --container-width: #{$container-width + 'px'};
     --hide-menu: #{$tablet};
 }
-
-// ========== КОНЕЦ ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
 
 // Сброс CSS
 @import './reset';
@@ -116,7 +112,6 @@ body {
             right: 0;
             height: 100%;
             background-color: $dark;
-            // padding-right: attr(data-padding-right);
             width: var(--body-padding-right);
         }
     }
@@ -133,13 +128,6 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    // overflow: hidden;
-
-    // & > .content {
-    //     flex: 1 0 auto;
-    //     position: relative;
-    //     z-index: 1;
-    // }
 }
 
 .content {
@@ -202,14 +190,12 @@ body {
 // Общие стили проекта
 @import './common';
 
-// Компоненты
-// @import "./components/cursorSmooth";
-// @import "./components/includedVideo";
-// @import "./components/backToTop";
-// @import "./components/signa";
+// Блоки
+@import "./blocks/b-info";
 
 // Карточки
 @import "./cards/c-exh";
+@import "./cards/c-lect";
 
 // Модальные окна
 // @import "./components/modals/";
@@ -220,7 +206,6 @@ body {
 @import './sections/main';
 @import './sections/s-about';
 @import './sections/s-exh';
+@import './sections/s-lect';
+@import './sections/s-video';
 @import './sections/footer';
-
-// Стили для отдельных страниц
-// @import "./pages/";
