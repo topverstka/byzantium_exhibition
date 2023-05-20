@@ -1,0 +1,39 @@
+.seo {
+
+	h3 {
+		@include title-2();
+        // font-size: rem(38);
+        margin: em(40, 38) 0 em(20, 38);
+	}
+
+    p,
+    ul,
+    ol {
+        @include text;
+    }
+
+	p {
+		margin: em(16, 22) 0;
+	}
+
+	ul {
+		margin: em(16, 22) 0;
+
+		li {
+			list-style: disc;
+			list-style-position: inside;
+		}
+	}
+
+	ol {
+		margin: em(16, 22) 0;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
+	& > *:first-child {
+		margin-top: 0;
+	}
+}
