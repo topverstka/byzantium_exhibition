@@ -2,11 +2,11 @@
 @import './mixins';
 
 // ========== ШРИФТЫ ==========
-@include font('Lena', normal, 400, 'fonts/Lena.woff2');
-@include font('Hauora', normal, 400, 'fonts/Hauora-Regular.woff2');
-@include font('Hauora', normal, 500, 'fonts/Hauora-Medium.woff2');
-@include font('Hauora', normal, 600, 'fonts/Hauora-SemiBold.woff2');
-@include font('Hauora', normal, 700, 'fonts/Hauora-Bold.woff2');
+@include font('Lena', normal, 400, '/fonts/Lena.woff2');
+@include font('Hauora', normal, 400, '/fonts/Hauora-Regular.woff2');
+@include font('Hauora', normal, 500, '/fonts/Hauora-Medium.woff2');
+@include font('Hauora', normal, 600, '/fonts/Hauora-SemiBold.woff2');
+@include font('Hauora', normal, 700, '/fonts/Hauora-Bold.woff2');
 
 // ========== ПЕРЕМЕННЫЕ ==========
 $light: #fff;
