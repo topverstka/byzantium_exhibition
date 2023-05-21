@@ -15,9 +15,9 @@
         }
     }
 
-    @media (max-width: 800px) {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    @media (max-width: 900px) {
+        // grid-template-columns: 1fr;
+        // gap: 12px;
         padding: rem(30) 0;
     }
 
@@ -28,7 +28,7 @@
 
 .c-lect__header {
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         display: inline;
 
         & > *:not(:last-child) {
@@ -40,14 +40,14 @@
 
 .c-lect__date {
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         font-size: rem(22);
     }
 }
 
 .c-lect__time {
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         font-size: rem(20);
     }
 }

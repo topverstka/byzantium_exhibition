@@ -73,13 +73,22 @@
 .py-m {
     padding: 100px 0;
 
-    @media (max-width: $tablet) {
+    @media (max-width: 1200px) {
         padding: 80px 0;
     }
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: 900px) {
         padding: 60px 0;
     }
+
+    @media (max-width: $mobile-l) {
+        padding: 48px 0;
+    }
+}
+
+.frame-vinous {
+    background-color: $accent-dark;
+    color: $light;
 }
 //========================================================================================================================================================
 
@@ -110,7 +119,8 @@
 
 @mixin text {
     font-size: rem(22);
-    color: create-rgba($text-primary, .8);
+    // color: create-rgba($text-primary, .8);
+    opacity: .8;
 
     &.is-light {
         color: create-rgba($light, .7);
@@ -125,7 +135,8 @@
 .title-ghost {
     font-size: rem(22);
     font-weight: 4;
-    color: create-rgba($text-primary, .5);
+    // color: create-rgba($text-primary, .5);
+    opacity: .5;
 }
 
 .text {
@@ -163,8 +174,21 @@
 // Шаблон для раздела с левым маленьким столбиком и правой контентной частью
 .temp {
     display: grid;
-    grid-template-columns: 0.35fr 1fr;
+    grid-template-columns: .35fr 1fr;
     gap: 24px;
+
+    @media (max-width: 1550px) {
+        grid-template-columns: .3fr 1fr;
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: .2fr 1fr;
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 }
 
 .temp-header {

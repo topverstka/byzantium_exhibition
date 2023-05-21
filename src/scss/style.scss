@@ -17,6 +17,7 @@ $text-primary: $dark;
 $text-light: $light;
 $text-second: #7d7d7d;
 $accent: #6F2036;
+$accent-dark: #3B1120;
 $accent-second: #785a36;
 
 // Hovers
@@ -120,14 +121,6 @@ body {
 *::selection {
     background-color: $dark;
     color: $light;
-}
-
-.wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .content {
