@@ -1,0 +1,105 @@
+.s-yell {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-color: $accent;
+    @include resVal(height, 320, 700, 320, 1920);
+
+    &.is-index {
+
+        .s-yell__title {
+            top: 90px;
+            left: 310px;
+            @include resVal(left, 16, 310, 320, 1920);
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                bottom: -16px;
+                left: 0;
+                width: 500px;
+                @include resVal(left, -30, 0, 320, 1920);
+                @include resVal(width, 180, 500, 320, 1920);
+            }
+
+            &.is-2 {
+                z-index: 1;
+                top: 32px;
+                right: 420px;
+                width: 300px;
+                @include resVal(top, -16, 32, 320, 1920);
+                @include resVal(right, -16, 420, 320, 1920);
+                @include resVal(width, 130, 300, 320, 1920);
+            }
+
+            &.is-3 {
+                bottom: -100px;
+                right: -514px;
+                width: 976px;
+                @include resVal(bottom, -60, -100, 320, 1920);
+                @include resVal(right, -130, -514, 320, 1920);
+                @include resVal(width, 250, 976, 320, 1920);
+            }
+        }
+    }
+}
+
+.s-yell__wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.s-yell__body {
+    max-width: 1920px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.s-yell__decor {
+    // user-select: none;
+    // pointer-events: none;
+
+    &.is-outside {
+        max-width: 1920px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+}
+
+.s-yell-img {
+    position: absolute;
+    height: auto;
+}
+
+.s-yell__title {
+    position: absolute;
+    z-index: 1;
+    font-family: $ff-title;
+    font-size: 176px;
+    font-weight: 400;
+    line-height: .85;
+    color: $light;
+    @include resVal(font-size, 40, 176, 320, 1920);
+
+    span {
+        display: block;
+
+        &:nth-child(2) {
+            margin-left: 0.6em;
+        }
+
+        &:nth-child(3) {
+            margin-left: 1.2em;
+        }
+    }
+}
