@@ -1,16 +1,23 @@
 .seo {
+	--text-color: 0, 0%, 7%;
+	font-size: rem(22);
+
+	.frame-vinous & {
+		--text-color: 0, 0%, 100%;
+	}
 
 	h3 {
 		@include title-2();
         @include title-2-adaptive;
-        // font-size: rem(38);
+		color: hsla(var(--text-color), 1);
         margin: em(40, 38) 0 em(20, 38);
 	}
 
     p,
     ul,
     ol {
-        @include text;
+		color: hsla(var(--text-color), 0.6);
+		// @include text;
     }
 
 	p {
@@ -28,6 +35,18 @@
 
 	ol {
 		margin: em(16, 22) 0;
+	}
+
+	a {
+		font-weight: 600;
+		color: $accent;
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	& > *:last-child {

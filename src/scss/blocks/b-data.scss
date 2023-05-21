@@ -1,0 +1,33 @@
+.b-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: 600px) {
+        gap: 4px;
+    }
+}
+
+.b-data__title {
+    font-family: $ff-title;
+    font-size: rem(80);
+    font-weight: 400;
+    line-height: 1;
+
+    span {
+        font-size: .7em;
+        opacity: .4;
+        vertical-align: top;
+    }
+
+    @media (max-width: 600px) {
+        font-size: rem(60);
+    }
+}
+
+.b-data__text {
+
+    @media (max-width: $mobile-l) {
+        font-size: rem(14, 16);
+    }
+}

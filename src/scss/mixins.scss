@@ -39,8 +39,8 @@
 	@return $result;
 }
 //REM
-@function rem($px) {
-	$result: math.div(math.round(math.div($px, 22) * 100), 100) + rem;
+@function rem($px, $current: 22) {
+	$result: math.div(math.round(math.div($px, $current) * 100), 100) + rem;
 	@return $result;
 }
 //EM

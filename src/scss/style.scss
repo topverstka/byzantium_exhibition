@@ -138,7 +138,8 @@ body {
     @if ($max-width-container > 0) {
         max-width: $max-width-container + px;
         box-sizing: content-box;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @if ($container-padding > 0) {
@@ -185,6 +186,7 @@ body {
 
 // Блоки
 @import "./blocks/b-info";
+@import "./blocks/b-data";
 
 // Карточки
 @import "./cards/c-exh";
@@ -201,4 +203,5 @@ body {
 @import './sections/s-exh';
 @import './sections/s-lect';
 @import './sections/s-video';
+@import './sections/s-place';
 @import './sections/footer';
