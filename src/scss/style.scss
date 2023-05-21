@@ -184,6 +184,9 @@ body {
 // Общие стили проекта
 @import './common';
 
+// Компоненты
+@import "./components/visim";
+
 // Блоки
 @import "./blocks/b-info";
 @import "./blocks/b-data";

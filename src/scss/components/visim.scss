@@ -1,0 +1,35 @@
+.visim {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: rem(20);
+    font-weight: 700;
+    transition: color $tr;
+
+    &::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        @include mask(center/contain no-repeat url(/img/sprite.svg#eye));
+        background-color: currentColor;
+        transition: background-color $tr;
+
+        @media (max-width: 1200px) {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    @media (any-hover: hover) {
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        font-size: rem(18);
+        gap: 8px;
+    }
+}
