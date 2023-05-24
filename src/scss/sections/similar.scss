@@ -1,0 +1,18 @@
+.similar {
+
+}
+
+.similar__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px
+    }
+
+    @media (max-width: $mobile-l) {
+        grid-template-columns: 1fr;
+    }
+}
