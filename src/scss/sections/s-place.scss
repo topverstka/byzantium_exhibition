@@ -27,7 +27,7 @@
     }
 
     @media (max-width: 600px) {
-        grid-template-columns: 1fr;
+        // grid-template-columns: 1fr;
         gap: 32px;
     }
 
@@ -36,6 +36,7 @@
     }
 
     @media (max-width: $mobile-l) {
+        gap: 16px;
         margin-top: 40px;
     }
 }
