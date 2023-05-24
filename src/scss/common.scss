@@ -121,7 +121,7 @@
     }
 
     @media (max-width: 500px) {
-        font-size: 24px;
+        font-size: rem(20, 16);
     }
 }
 
@@ -145,6 +145,10 @@
     font-weight: 4;
     // color: create-rgba($text-primary, .5);
     opacity: .5;
+
+    @media (max-width: 500px) {
+        font-size: rem(14, 16);
+    }
 }
 
 .text {

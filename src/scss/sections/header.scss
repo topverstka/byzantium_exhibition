@@ -32,6 +32,10 @@
     @media (max-width: 1200px) {
         width: 130px;
     }
+
+    @media (max-width: $mobile-l) {
+        width: 100px;
+    }
 }
 
 .menu {
@@ -44,12 +48,10 @@
         left: 0;
         bottom: 0;
         min-height: 100vh;
-        // height: fit-content;
         height: 100%;
         display: flex;
         justify-content: flex-end;
         background-color: rgba(0,0,0,0);
-        // pointer-events: none;
         visibility: hidden;
         transition: background-color $tr, visibility $tr;
 
@@ -75,6 +77,10 @@
         overflow: auto;
         transform: translateX(100%);
         transition: transform $tr;
+    }
+
+    @media (max-width: $mobile-l) {
+        max-width: none;
     }
 }
 
