@@ -22,7 +22,6 @@ class Menu {
     }
 
     open() {
-        console.log(this.menu)
         this.menu.classList.add('is-show')
         bodyLock()
     }

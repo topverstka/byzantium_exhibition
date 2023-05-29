@@ -166,6 +166,108 @@
             }
         }
     }
+
+    &.for-exhibit-antique-hersones {
+        height: 490px;
+        @include resVal(height, 200, 490, 320, 1920);
+
+        .s-yell__title {
+            top: 90px;
+            left: 100px;
+            @include resVal(left, 16, 100, 320, 1920);
+            @include resVal(top, 60, 90, 320, 1920);
+
+            span {
+
+                &:nth-child(2) {
+                    margin-left: 2.4em;
+                }
+            }
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                top: 90px;
+                right: -240px;
+                width: 600px;
+                @include resVal(top, 130, 90, 320, 1920);
+                @include resVal(right, -70, -240, 320, 1920);
+                @include resVal(width, 200, 600, 320, 1920);
+            }
+        }
+    }
+
+    &.for-exhibit-byzantine-hersones {
+        height: 490px;
+        @include resVal(height, 200, 490, 320, 1920);
+
+        .s-yell__title {
+            top: 90px;
+            left: 100px;
+            @include resVal(left, 16, 100, 320, 1920);
+            @include resVal(top, 60, 90, 320, 1920);
+
+            span {
+
+                &:nth-child(2) {
+                    margin-left: 2.4em;
+                }
+            }
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                top: 136px;
+                right: -1450px;
+                width: 2200px;
+                @include resVal(top, 105, 136, 320, 1920);
+                @include resVal(right, -360, -1450, 320, 1920);
+                @include resVal(width, 600, 2200, 320, 1920);
+            }
+        }
+    }
+
+    &.for-exhibit-novg {
+        height: 490px;
+        @include resVal(height, 200, 490, 320, 1920);
+
+        .s-yell__title {
+            top: 90px;
+            left: 100px;
+            @include resVal(left, 16, 100, 320, 1920);
+            @include resVal(top, 60, 90, 320, 1920);
+
+            span {
+
+                &:nth-child(2) {
+                    margin-left: 2.4em;
+                }
+            }
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                top: 315px;
+                left: -200px;
+                width: 600px;
+                @include resVal(top, 120, 315, 320, 1920);
+                @include resVal(left, -100, -200, 320, 1920);
+                @include resVal(width, 200, 600, 320, 1920);
+            }
+
+            &.is-2 {
+                top: -470px;
+                right: -324px;
+                width: 600px;
+                @include resVal(top, -180, -470, 320, 1920);
+                @include resVal(right, -120, -324, 320, 1920);
+                @include resVal(width, 200, 600, 320, 1920);
+            }
+        }
+    }
 }
 
 .s-yell__wrap {
