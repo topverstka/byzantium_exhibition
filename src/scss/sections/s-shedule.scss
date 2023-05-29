@@ -1,0 +1,81 @@
+.s-schedule {
+
+}
+
+.s-schedule__container {
+
+}
+
+.s-schedule__wrap {
+
+}
+
+.s-schedule__body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    & > .s-schedule-list:not(:last-child) {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $border-color-light;
+
+        @media (max-width: $mobile-l) {
+            padding-bottom: 16px;
+        }
+    }
+
+    &.is-place {
+
+        .s-schedule-list {
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    @media (max-width: $mobile-l) {
+        gap: 16px;
+
+        &.is-schedule {
+
+            .s-schedule-block:nth-child(1) {
+
+                .title-2 {
+                    font-size: rem(18, 16);
+                }
+            }
+        }
+    }
+}
+
+.s-schedule-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 40px;
+
+    @media (max-width: $tablet) {
+        gap: 24px;
+    }
+}
+
+.s-schedule-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: $tablet) {
+        gap: 12px;
+    }
+
+    @media (max-width: $mobile-l) {
+        gap: 8px;
+
+        &.is-values {
+
+            .title-2 {
+                font-size: rem(16, 16);
+                color: $text-second;
+            }
+        }
+    }
+}

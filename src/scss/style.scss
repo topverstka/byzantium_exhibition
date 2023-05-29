@@ -194,6 +194,7 @@ body {
 // Блоки
 @import "./blocks/b-info";
 @import "./blocks/b-data";
+@import "./blocks/b-contact";
 
 // Карточки
 @import "./cards/c-exh";
@@ -211,7 +212,10 @@ body {
 @import './sections/s-lect';
 @import './sections/s-video';
 @import './sections/s-place';
+@import './sections/s-shedule';
 @import './sections/product';
 @import './sections/similar';
 @import './sections/exhibits';
+@import './sections/map';
+@import './sections/contacts';
 @import './sections/footer';
