@@ -35,6 +35,11 @@
 
 	ol {
 		margin: em(16, 22) 0;
+		padding-left: 1em;
+
+		li {
+			list-style-position: outside;
+		}
 	}
 
 	a {
@@ -47,6 +52,11 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	video-section {
+		// width: 100vw;
+		display: block;
 	}
 
 	& > *:last-child {

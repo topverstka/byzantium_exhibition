@@ -16,7 +16,7 @@
 
     &.for-index-main {
 
-        .s-yell__title {
+        .s-yell__content {
             top: 90px;
             left: 310px;
             @include resVal(top, 100, 90, 320, 1920);
@@ -54,11 +54,75 @@
         }
     }
 
+    &.for-about {
+
+        .s-yell__content {
+            top: 90px;
+            left: 310px;
+            @include resVal(top, 80, 90, 320, 1920);
+            @include resVal(left, 16, 310, 320, 1920);
+        }
+
+        .s-yell__content-body {
+            margin-left: 20%;
+
+            @media (max-width: 500px) {
+                margin-left: 10%;
+            }
+        }
+
+        .s-yell__title {
+
+            span {
+
+                &:nth-child(2) {
+                    margin-left: 1.3em;
+
+                    @media (max-width: 500px) {
+                        margin-left: .6em;
+                    }
+                }
+            }
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                bottom: 0;
+                left: 0;
+                width: 464px;
+                @include resVal(left, -20, 0, 320, 1920);
+                @include resVal(bottom, -20, 0, 320, 1920);
+                @include resVal(width, 150, 464, 320, 1920);
+            }
+
+            &.is-2 {
+                // display: none;
+                z-index: 1;
+                top: 140px;
+                right: 198px;
+                width: 417px;
+                @include resVal(top, -50, 140, 320, 1920);
+                @include resVal(right, -30, 198, 320, 1920);
+                @include resVal(width, 150, 417, 320, 1920);
+            }
+
+            &.is-3 {
+                top: 37px;
+                right: -148px;
+                width: 603px;
+                @include resVal(top, 200, 37, 320, 1920);
+                @include resVal(right, -60, -148, 320, 1920);
+                @include resVal(width, 200, 603, 320, 1920);
+            }
+        }
+    }
+
     &.for-museum-hers {
         height: 640px;
         @include resVal(height, 320, 640, 320, 1920);
 
-        .s-yell__title {
+        .s-yell__content {
             top: 90px;
             left: 370px;
             @include resVal(left, 16, 370, 320, 1920);
@@ -114,7 +178,7 @@
         height: 640px;
         @include resVal(height, 320, 640, 320, 1920);
 
-        .s-yell__title {
+        .s-yell__content {
             top: 90px;
             left: 370px;
             @include resVal(left, 16, 370, 320, 1920);
@@ -171,7 +235,7 @@
         height: 490px;
         @include resVal(height, 200, 490, 320, 1920);
 
-        .s-yell__title {
+        .s-yell__content {
             top: 90px;
             left: 100px;
             @include resVal(left, 16, 100, 320, 1920);
@@ -202,7 +266,7 @@
         height: 490px;
         @include resVal(height, 200, 490, 320, 1920);
 
-        .s-yell__title {
+        .s-yell__content {
             top: 90px;
             left: 100px;
             @include resVal(left, 16, 100, 320, 1920);
@@ -233,7 +297,7 @@
         height: 490px;
         @include resVal(height, 200, 490, 320, 1920);
 
-        .s-yell__title {
+        .s-yell__content {
             top: 90px;
             left: 100px;
             @include resVal(left, 16, 100, 320, 1920);
@@ -306,9 +370,14 @@
     height: auto;
 }
 
-.s-yell__title {
+.s-yell__content {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
+}
+
+.s-yell__title {
+    // position: absolute;
+    // z-index: 1;
     font-family: $ff-title;
     font-size: 176px;
     font-weight: 400;
@@ -326,4 +395,19 @@
             margin-left: 1.2em;
         }
     }
+}
+
+.s-yell__text {
+    font-size: 38px;
+    margin-top: 20px;
+    @include resVal(font-size, 14, 38, 320, 1920);
+
+    @media (max-width: $mobile-l) {
+        margin-top: 12px;
+    }
+}
+
+.s-yell__btn {
+    margin-top: 60px;
+    @include resVal(margin-top, 14, 60, 320, 1920);
 }

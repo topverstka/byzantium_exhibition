@@ -4,10 +4,53 @@
 }
 
 .s-exh__body {
+}
+
+.s-exh__slider-container {
+    position: relative;
+}
+
+.s-exh__slider-wrapper {
     display: flex;
     gap: 40px;
 
     & > * {
-        flex-shrink: 0;
+        // flex-shrink: 0;
+        flex: 0 0 100%;
+    }
+}
+
+.s-exh__slider-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    pointer-events: none;
+}
+
+.s-exh__slider-arrow {
+    width: 40px;
+    aspect-ratio: 1/1;
+    @include mask(center/contain no-repeat url(/img/sprite.svg#arrow));
+    background-color: rgba(18, 18, 18, 0.3);
+    font-size: 1px;
+    pointer-events: fill;
+    transition: $tr;
+
+    &.is-disabled {
+        opacity: .7;
+        cursor: not-allowed;
+    }
+
+    @media (any-hover: hover) {
+
+        &:not(.is-disabled):hover {
+            background-color: rgba(18, 18, 18, 0.5);
+        }
     }
 }

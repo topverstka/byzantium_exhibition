@@ -1,0 +1,33 @@
+.c-coll {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    @media (max-width: 1550px) {
+        max-width: 300px;
+    }
+
+    @media (max-width: 1200px) {
+        max-width: 250px;
+    }
+}
+
+.s-coll__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.c-coll__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 300px;
+    display: inline-block;
+    font-size: rem(38);
+    font-weight: 600;
+    line-height: 1.2;
+}

@@ -6,6 +6,7 @@ class Slider {
     slider
 
     constructor(el, { nav, ...options }) {
+        if (!el) return
         this.el = el
         this.slider = Embla(el, options, [ClassNames()])
         this.watchDrag = options.watchDrag || true

@@ -34,6 +34,7 @@ export default defineConfig({
                 about: resolve(__dirname, 'src/about.html'),
                 contacts: resolve(__dirname, 'src/contacts.html'),
                 exhibit: resolve(__dirname, 'src/exhibit.html'),
+                about: resolve(__dirname, 'src/about.html'),
             },
         },
     },

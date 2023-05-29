@@ -8,16 +8,33 @@ if (document.querySelector('.menu')) {
 }
 customElements.define('video-section', VideoSection)
 
+// const sliderNode = document.querySelector('.product__slider')
+// if (sliderNode) {
+// }
 new Slider(
     document.querySelector('.product__slider'),
     {
-		// align: 'start',
-		// containScroll: 'trimSnaps',
-		// skipSnaps: true,
+        // align: 'start',
+        // containScroll: 'trimSnaps',
+        // skipSnaps: true,
         // watchDrag: false,
         nav: {
             prev: document.querySelector('.product__slider-arrow.is-prev'),
             next: document.querySelector('.product__slider-arrow.is-next'),
+        },
+    }
+)
+
+new Slider(
+    document.querySelector('.s-exh__slider'),
+    {
+		align: 'start',
+		containScroll: 'trimSnaps',
+		// skipSnaps: true,
+        // watchDrag: false,
+        nav: {
+            prev: document.querySelector('.s-exh__slider-arrow.is-prev'),
+            next: document.querySelector('.s-exh__slider-arrow.is-next'),
         },
     }
 )

@@ -1,10 +1,11 @@
 class Navigation {
 
-    constructor(root, { next, prev }) {
+    constructor(root, nav) {
+        if (!nav || (!nav.next && !nav.prev)) return
         this.slider = root.slider
         this.root = root
-        this.next = next
-        this.prev = prev
+        this.next = nav.next
+        this.prev = nav.prev
 
         this.init()
     }
