@@ -59,7 +59,6 @@
         .s-yell__content {
             top: 90px;
             left: 310px;
-            // @include resVal(top, 100, 90, 320, 1920);
             @include resVal(left, 12, 310, 320, 1920);
         }
 
@@ -90,6 +89,81 @@
                 @include resVal(bottom, -50, -188, 320, 1920);
                 @include resVal(right, -110, -410, 320, 1920);
                 @include resVal(width, 250, 950, 320, 1920);
+            }
+        }
+    }
+
+    &.for-lectures-main {
+
+        .s-yell__content {
+            top: 90px;
+            left: 310px;
+            @include resVal(top, 80, 90, 320, 1920);
+            @include resVal(left, 12, 310, 320, 1920);
+        }
+
+        .s-yell__title {
+
+            span {
+
+                &:nth-child(2) {
+                    margin-left: 1.2em;
+
+                    @media (max-width: $mobile-l) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .s-yell__content-body {
+            margin-left: 20%;
+
+            @media (max-width: $mobile-l) {
+                margin-left: 0;
+            }
+        }
+
+        .s-yell__text {
+
+            span {
+                white-space: nowrap;
+
+                @media (max-width: 500px) {
+                    display: block;
+                }
+            }
+
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                z-index: 1;
+                bottom: 0;
+                left: 0;
+                width: 450px;
+                @include resVal(bottom, -80, 0, 320, 1920);
+                @include resVal(left, -80, 0, 320, 1920);
+                @include resVal(width, 180, 450, 320, 1920);
+            }
+
+            &.is-2 {
+                top: -258px;
+                left: -380px;
+                width: 630px;
+                @include resVal(top, -100, -258, 320, 1920);
+                @include resVal(left, -110, -380, 320, 1920);
+                @include resVal(width, 180, 630, 320, 1920);
+            }
+
+            &.is-3 {
+                top: 0;
+                right: 100px;
+                width: 400px;
+                @include resVal(top, 60, 0, 320, 1920);
+                @include resVal(right, -10, 100, 320, 1920);
+                @include resVal(width, 120, 400, 320, 1920);
             }
         }
     }
@@ -408,6 +482,26 @@
 .s-yell-img {
     position: absolute;
     height: auto;
+}
+
+.s-yell-img__text {
+    font-size: rem(22);
+    font-weight: 500;
+    margin-top: 16px;
+    @include resVal(margin-top, 6, 16, 320, 1920);
+
+    span {
+        opacity: .6;
+        font-weight: 400;
+    }
+
+    @media (max-width: 700px) {
+        font-size: rem(14, 16);
+    }
+
+    @media (max-width: 500px) {
+        font-size: rem(12, 16);
+    }
 }
 
 .s-yell__content {
