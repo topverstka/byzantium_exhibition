@@ -54,6 +54,46 @@
         }
     }
 
+    &.for-learn-main {
+
+        .s-yell__content {
+            top: 90px;
+            left: 310px;
+            // @include resVal(top, 100, 90, 320, 1920);
+            @include resVal(left, 12, 310, 320, 1920);
+        }
+
+        .s-yell-img {
+
+            &.is-1 {
+                bottom: -12px;
+                left: 0;
+                width: 500px;
+                @include resVal(left, -50, 0, 320, 1920);
+                @include resVal(width, 180, 500, 320, 1920);
+            }
+
+            &.is-2 {
+                z-index: 1;
+                top: 0;
+                right: 460px;
+                width: 380px;
+                @include resVal(top, -10, 0, 320, 1920);
+                @include resVal(right, -60, 460, 320, 1920);
+                @include resVal(width, 180, 300, 320, 1920);
+            }
+
+            &.is-3 {
+                bottom: -188px;
+                right: -410px;
+                width: 950px;
+                @include resVal(bottom, -50, -188, 320, 1920);
+                @include resVal(right, -110, -410, 320, 1920);
+                @include resVal(width, 250, 950, 320, 1920);
+            }
+        }
+    }
+
     &.for-about {
 
         .s-yell__content {

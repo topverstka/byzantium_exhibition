@@ -1,0 +1,77 @@
+.c-learn {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 500px) {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+}
+
+.c-learn__date {
+    flex-shrink: 0;
+    width: 120px;
+
+    @media (max-width: 1200px) {
+        width: 100px;
+    }
+
+    @media (max-width: 500px) {
+        width: auto;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 8px;
+        line-height: 1.2;
+    }
+}
+
+.c-learn__date-year {
+
+    @media (max-width: 500px) {
+        font-size: rem(16, 16);
+    }
+}
+
+.c-learn__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: 500px) {
+        gap: 6px;
+    }
+
+    @media (any-hover: hover) {
+
+        &:hover {
+
+            .c-learn__title {
+                color: $accent;
+
+                span {
+                    box-shadow: 0 -.1em inset currentColor;
+                }
+            }
+        }
+    }
+}
+
+.c-learn__info {
+
+    @media (max-width: 500px) {
+        font-size: rem(14, 16);
+    }
+}
+
+.c-learn__title {
+    line-height: 1.25;
+
+    span {
+        transition: $tr;
+    }
+
+    @media (max-width: 500px) {
+        font-size: rem(18, 16);
+        font-weight: 700;
+    }
+}
